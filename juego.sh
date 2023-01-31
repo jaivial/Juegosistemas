@@ -64,6 +64,24 @@ case "$opcion" in
 ;;
 esac
 
+case $(($RANDOM%5)) in 
+"1")
+    echo "La maquina ha elejido Piedra"
+    ;;
+"2")
+    echo "La maquina ha elejido Papel"
+    ;;
+"3")    
+    echo "La maquina ha elejido Tijeras"
+;;
+"4")
+    echo "La maquina ha elejido Lagarto"
+;;
+"5")
+    echo "La maquina ha elejido Spock"
+;;
+esac
+
 ##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
 num=$(( ( $RANDOM % 5 ) + 1 ))
 echo "El número aleatorio elegido es: $num"
