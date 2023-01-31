@@ -56,3 +56,21 @@ case "$opcion" in
     echo "La opción introducida no es correcta, teclea un número del 1 al 6."
 ;;
 esac
+
+case $(($RANDOM%5)) in 
+"1")
+    echo "La maquina ha elejido Piedra"
+    ;;
+"2")
+    echo "La maquina ha elejido Papel"
+    ;;
+"3")    
+    echo "La maquina ha elejido Tijeras"
+;;
+"4")
+    echo "La maquina ha elejido Lagarto"
+;;
+"5")
+    echo "La maquina ha elejido Spock"
+;;
+esac
