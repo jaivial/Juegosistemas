@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-read -p "Selecciona una opción: " opción
+read -p "Selecciona una opción: " opcion
