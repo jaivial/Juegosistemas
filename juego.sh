@@ -29,4 +29,6 @@ echo "2.- Sacar Papel"
 echo "3.- Sacar Tijeras"
 echo "4.- Sacar Lagarto"
 echo "5.- Sacar Spock"
+echo "6.- Cancelar partida"
 read -p "Selecciona una opción: " opcion
+
