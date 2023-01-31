@@ -37,23 +37,23 @@ read -p "Selecciona una opción: " opcion
 case "$opcion" in 
 "1")
     echo "Has elejido Piedra"
-    variableUser=1
+    variableUser="piedra"
     ;;
 "2")
     echo "Has elejido Papel"
-    variableUser=2
+    variableUser="papel"
     ;;
 "3")    
     echo "Has elejido Tijeras"
-    variableUser=3
+    variableUser="tijeras"
 ;;
 "4")
     echo "Has elejido Lagarto"
-    variableUser=4
+    variableUser="lagarto"
 ;;
 "5")
     echo "Has elejido Spock"
-        variableUser=5
+        variableUser="spock"
 ;;
 "6")
     echo "Vas a abandonar la partida."
@@ -64,23 +64,7 @@ case "$opcion" in
 ;;
 esac
 
-case $(($RANDOM%5)) in 
-"1")
-    echo "La maquina ha elejido Piedra"
-    ;;
-"2")
-    echo "La maquina ha elejido Papel"
-    ;;
-"3")    
-    echo "La maquina ha elejido Tijeras"
-;;
-"4")
-    echo "La maquina ha elejido Lagarto"
-;;
-"5")
-    echo "La maquina ha elejido Spock"
-;;
-esac
+
 
 ##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
 num=$(( ( $RANDOM % 5 ) + 1 ))
@@ -90,42 +74,42 @@ echo "El número aleatorio elegido es: $num"
 case "$num" in 
 "1")
     echo "La máquina ha elejido Piedra"
-    variableMachine=-1
+    variableMachine="piedra"
     ;;
 "2")
     echo "La máquina ha elejido Papel"
-    variableMachine=-2
+    variableMachine="papel"
     ;;
 "3")    
     echo "La máquina ha elejido Tijeras"
-    variableMachine=-3
+    variableMachine="tijeras"
 ;;
 "4")
     echo "La máquina ha elejido Lagarto"
-    variableMachine=-4
+    variableMachine="lagarto"
 ;;
 "5")
     echo "La máquina ha elejido Spock"
-    variableMachine=-5
+    variableMachine="spock"
 ;;
 esac
 
-let resultado=$variableUser+$variableMachine
+
 
 ##Estructura if para enfrentar en combate cada opción y seleccionar un ganador.
-if [ "$resultado" == 0 ];
+if [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "piedra" ];
 then
-    echo "¡Tablas! Habéis quedado empate"
-elif [ "$resultado" == -1 ];
+    echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
+elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "papel" ];
 then  
     echo "Gana la máquina porque papel gana a piedra. JAJAJAJAJ PUTO PERDEDOR ESPABILA"
-elif [ "$resultado" == -2 ];
+elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "tijeras" ];
 then  
     echo "Enohorabuena ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la MATRIX"
-    elif [ "$resultado" == -3 ];
+    elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "lagarto" ];
 then  
     echo "Enohorabuena ganas tú con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
-elif [ "$resultado" == -4 ];
+elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "spock" ];
 then  
     echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. La MATRIX está avanzando en su conquista."
 else
