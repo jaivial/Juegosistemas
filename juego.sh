@@ -32,3 +32,27 @@ echo "5.- Sacar Spock"
 echo "6.- Cancelar partida"
 read -p "Selecciona una opción: " opcion
 
+case "$opcion" in 
+"1")
+    echo "Has elejido Piedra"
+    ;;
+"2")
+    echo "Has elejido Papel"
+    ;;
+"3")    
+    echo "Has elejido Tijeras"
+;;
+"4")
+    echo "Has elejido Lagarto"
+;;
+"5")
+    echo "Has elejido Spock"
+;;
+"6")
+    echo "Vas a abandonar la partida."
+    source menu.sh
+;;
+*)
+    echo "La opción introducida no es correcta, teclea un número del 1 al 6."
+;;
+esac
