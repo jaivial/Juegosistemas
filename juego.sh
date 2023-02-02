@@ -138,3 +138,23 @@ then
 else
     echo "Esto es una prueba"
 fi
+
+##Usuario saca tijeras
+if [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "tijeras" ];
+then
+    echo "¡Tablas! Haceis la tijera, ambas disfrutáis asi que no gana nadie."
+elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "piedra" ];
+then  
+    echo "Te impacta una piedra desde el cielo. La piedra te destroza física y emocionalmente, caes en depresión y pierdes la partida."
+elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "papel" ];
+then  
+    echo "Un papel con aires de superioridad se acerca a ti. Sin ni siquiera inmutarte lo partes por la mitad. Tú Ganas."
+    elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "lagarto" ];
+then  
+    echo "Te encuentras con un lagarto diminuto y le cortas la cabeza a sangre fría. Eres un monstruo sin sentimientos... pero has ganado la partida."
+elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "spock" ];
+then  
+    echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
+else
+    echo "Esto es una prueba"
+fi
