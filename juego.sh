@@ -97,6 +97,7 @@ esac
 
 
 ##Estructura if para enfrentar en combate cada opción y seleccionar un ganador.
+##Usuario saca piedra
 if [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "piedra" ];
 then
     echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
@@ -112,6 +113,25 @@ then
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "spock" ];
 then  
     echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. La MATRIX está avanzando en su conquista."
+else
+    echo "Esto es una prueba"
+fi
+##Usuario saca papel
+if [ "$variableUser" = "papel" ] && [ "$variableMachine" = "papel" ];
+then
+    echo "¡Tablas! Habéis quedado empate. Los papeles unen fuerzas para formar un folio pero ninguno gana."
+elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "piedra" ];
+then  
+    echo "En una ardúa batalla consigues enrrollar a la piedra con tu papel. Sales victorioso por esta vez..."
+elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "tijeras" ];
+then  
+    echo "En un intento de ataque, la tijera te ha partido brutalmente en dos. ¿En serio pensabas ganar a unas tijeras usando un papel? Pierdes la partida XD"
+    elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "lagarto" ];
+then  
+    echo "Un lagarto enorme acaba de devorarte. Has contribuido a que continue la cadena alimenticia, pero pierdes la partida."
+elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "spock" ];
+then  
+    echo "Acabas de desautorizar a Spock y con ello contribuir a la destrucción de La MATRIX. Tú Ganas."
 else
     echo "Esto es una prueba"
 fi
