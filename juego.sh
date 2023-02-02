@@ -75,22 +75,27 @@ echo "El número aleatorio elegido es: $num"
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in 
 "1")
+    sleep 0.5
     echo "La máquina ha elejido Piedra"
     variableMachine="piedra"
     ;;
 "2")
+sleep 0.5
     echo "La máquina ha elejido Papel"
     variableMachine="papel"
     ;;
 "3")    
+sleep 0.5
     echo "La máquina ha elejido Tijeras"
     variableMachine="tijeras"
 ;;
 "4")
+sleep 0.5
     echo "La máquina ha elejido Lagarto"
     variableMachine="lagarto"
 ;;
 "5")
+sleep 0.5
     echo "La máquina ha elejido Spock"
     variableMachine="spock"
 ;;
@@ -103,6 +108,29 @@ esac
 sleep 1
 if [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "piedra" ];
 then
+    sleep 1
+    echo '''     ___
+    /   \
+   |  o o|
+   | \_/ |
+   \_____/
+'''
+sleep 1
+echo " __      _______ 
+ \ \    / / ____|
+  \ \  / / (___  
+   \ \/ / \___ \ 
+    \  /  ____) |
+     \/  |_____/ 
+                 "
+sleep 1
+echo '''     ___
+    /   \
+   |  o o|
+   | \_/ |
+   \_____/
+'''
+sleep 1
     echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "papel" ];
 then  
