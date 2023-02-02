@@ -141,13 +141,140 @@ echo '''   ______ _____ _____ _    _ _______
  sleep 1
     echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "papel" ];
-then  
+then 
+ sleep 1
+    echo '''     ___
+    /   \
+   |  o o|
+   | \_/ |
+   \_____/
+'''
+sleep 1
+echo ''' 
+ __   _____ 
+ \ \ / / __|
+  \ V /\__ \
+   \_/ |___/                                                                                                                                                                                                                                                                                        
+'''
+sleep 1
+echo '''  
+ _________
+|         |
+|  papel  |
+|         |
+|_________|
+
+'''
+sleep 1
+echo '''   ______ _____ _____ _    _ _______ 
+ |  ____|_   _/ ____| |  | |__   __|
+ | |__    | || |  __| |__| |  | |   
+ |  __|   | || | |_ |  __  |  | |   
+ | |     _| || |__| | |  | |  | |   
+ |_|    |_____\_____|_|  |_|  |_|   
+ 
+ '''
+ sleep 1 
     echo "Gana la máquina porque papel gana a piedra. JAJAJAJAJ PUTO PERDEDOR ESPABILA"
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "tijeras" ];
 then  
+sleep 1
+    echo '''     ___
+    /   \
+   |  o o|
+   | \_/ |
+   \_____/
+'''
+sleep 1
+echo ''' 
+ __   _____ 
+ \ \ / / __|
+  \ V /\__ \
+   \_/ |___/                                                                                                                                                                                                                                                                                        
+'''
+sleep 1
+echo '''                                                                                  
+                                                          ▒▒▒▒▒▒                
+                                                      ▒▒▒▒░░░░▒▒                
+                                                    ▒▒░░░░░░▒▒                  
+                  ██▓▓██▓▓▓▓                      ▒▒░░░░░░▒▒                    
+                ██▒▒▒▒░░▒▒░░██                  ▒▒░░░░░░▒▒                      
+              ██▒▒▒▒██████▒▒▒▒██              ▒▒░░░░░░▒▒                        
+            ▓▓░░▒▒██      ██▒▒░░██          ▒▒░░░░░░▒▒                          
+            ██░░▒▒██        ██▒▒░░▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒          
+            ██▒▒▒▒▒▒██▓▓██▓▓▒▒░░▒▒░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒          
+              ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▓▓░░██░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒            
+                ██████████████████████░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒                
+                              ████▒▒░░██░░▒▒                                    
+                            ██▒▒░░▒▒░░░░██                                      
+                          ██▒▒▒▒████▒▒▒▒██                                      
+                        ██▒▒▒▒▓▓    ██░░██                                      
+                      ██▒▒▒▒██      ██▒▒██                                      
+                    ██▒▒▒▒██      ▓▓▒▒▒▒██                                      
+                    ██▒▒██      ██░░▒▒██                                        
+                    ▓▓▒▒▒▒▓▓▓▓▓▓░░░░▓▓                                          
+                      ██▒▒░░▒▒░░▒▒▓▓                                            
+                        ████████▓▓                                              
+'''
+sleep 1
+echo '''   ______ _____ _____ _    _ _______ 
+ |  ____|_   _/ ____| |  | |__   __|
+ | |__    | || |  __| |__| |  | |   
+ |  __|   | || | |_ |  __  |  | |   
+ | |     _| || |__| | |  | |  | |   
+ |_|    |_____\_____|_|  |_|  |_|   
+ 
+ '''
+ sleep 1 
     echo "Enohorabuena ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la MATRIX"
     elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "lagarto" ];
 then  
+ sleep 1
+    echo '''     ___
+    /   \
+   |  o o|
+   | \_/ |
+   \_____/
+'''
+sleep 1
+echo ''' 
+ __   _____ 
+ \ \ / / __|
+  \ V /\__ \
+   \_/ |___/                                                                                                                                                                                                                                                                                        
+'''
+sleep 1
+echo '''  
+       __ \/_
+      (' \`\
+   _\, \ \\/ 
+    /`\/\ \\
+         \ \\    
+          \ \\/\/_
+          /\ \\'\
+        __\ `\\\
+         /|`  `\\
+                \\
+                 \\
+                  \\    ,
+                   `---'  
+
+------------------------------------------------
+Thank you for visiting https://asciiart.website/
+This ASCII pic can be found at
+https://asciiart.website/index.php?art=animals/reptiles/lizards
+
+'''
+sleep 1
+echo '''   ______ _____ _____ _    _ _______ 
+ |  ____|_   _/ ____| |  | |__   __|
+ | |__    | || |  __| |__| |  | |   
+ |  __|   | || | |_ |  __  |  | |   
+ | |     _| || |__| | |  | |  | |   
+ |_|    |_____\_____|_|  |_|  |_|   
+ 
+ '''
+ sleep 1 
     echo "Enohorabuena ganas tú con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "spock" ];
 then  
