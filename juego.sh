@@ -67,7 +67,9 @@ esac
 
 
 ##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
+sleep 1
 num=$(( ( $RANDOM % 5 ) + 1 ))
+sleep 1
 echo "El número aleatorio elegido es: $num"
 
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
@@ -98,6 +100,7 @@ esac
 
 ##Estructura if para enfrentar en combate cada opción y seleccionar un ganador.
 ##Usuario saca piedra
+sleep 1
 if [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "piedra" ];
 then
     echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
@@ -135,4 +138,3 @@ then
 else
     echo "Esto es una prueba"
 fi
-
