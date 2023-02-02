@@ -116,13 +116,12 @@ then
    \_____/
 '''
 sleep 1
-echo " __      _______ 
- \ \    / / ____|
-  \ \  / / (___  
-   \ \/ / \___ \ 
-    \  /  ____) |
-     \/  |_____/ 
-                 "
+echo ''' 
+ __   _____ 
+ \ \ / / __|
+  \ V /\__ \
+   \_/ |___/                                                                                                                                                                                                                                                                                        
+'''
 sleep 1
 echo '''     ___
     /   \
@@ -131,6 +130,15 @@ echo '''     ___
    \_____/
 '''
 sleep 1
+echo '''   ______ _____ _____ _    _ _______ 
+ |  ____|_   _/ ____| |  | |__   __|
+ | |__    | || |  __| |__| |  | |   
+ |  __|   | || | |_ |  __  |  | |   
+ | |     _| || |__| | |  | |  | |   
+ |_|    |_____\_____|_|  |_|  |_|   
+ 
+ '''
+ sleep 1
     echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "papel" ];
 then  
