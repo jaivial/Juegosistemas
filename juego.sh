@@ -244,25 +244,27 @@ echo '''
    \_/ |___/                                                                                                                                                                                                                                                                                        
 '''
 sleep 1
-echo '''  
-       __ \/_
-      (' \`\
-   _\, \ \\/ 
-    /`\/\ \\
-         \ \\    
-          \ \\/\/_
-          /\ \\'\
-        __\ `\\\
-         /|`  `\\
-                \\
-                 \\
-                  \\    ,
-                   `---'  
 
-------------------------------------------------
-Thank you for visiting https://asciiart.website/
-This ASCII pic can be found at
-https://asciiart.website/index.php?art=animals/reptiles/lizards
+echo '''
+
+                                ████                                                    
+                          ████████████                                                  
+                          ██████  ██████                    ██                          
+                            ██████████████              ████                            
+                                ████████████            ██████                          
+                                    ████████████████████████████                        
+                              ██████████████████████████████                            
+                                ██  ██████████████████████████                          
+                                      ██  ██████████████████████                        
+                                ██████      ████████████████████                        
+                              ██████              ██      ██████                        
+                                ██            ████      ████████                        
+                                            ████  ██    ██████                          
+                                                      ████████                          
+                                                    ████████                            
+                                                  ████████                              
+                                            ████████████                                
+                                      ████████████                                      
 
 '''
 sleep 1
@@ -274,13 +276,64 @@ echo '''   ______ _____ _____ _    _ _______
  |_|    |_____\_____|_|  |_|  |_|   
  
  '''
- sleep 1 
     echo "Enohorabuena ganas tú con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
 elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "spock" ];
 then  
+sleep 1
+    echo '''     ___
+    /   \
+   |  o o|
+   | \_/ |
+   \_____/
+'''
+sleep 1
+echo ''' 
+ __   _____ 
+ \ \ / / __|
+  \ V /\__ \
+   \_/ |___/                                                                                                                                                                                                                                                                                        
+'''
+sleep 1
+
+echo '''
+      :                                 :       
+            :                                   :       
+            :  RRVIttIti+==iiii++iii++=;:,       :      
+            : IBMMMMWWWWMMMMMBXXVVYYIi=;:,        :     
+            : tBBMMMWWWMMMMMMBXXXVYIti;;;:,,      :     
+            t YXIXBMMWMMBMBBRXVIi+==;::;::::       ,    
+           ;t IVYt+=+iIIVMBYi=:,,,=i+=;:::::,      ;;   
+           YX=YVIt+=,,:=VWBt;::::=,,:::;;;:;:     ;;;   
+           VMiXRttItIVRBBWRi:.tXXVVYItiIi==;:   ;;;;    
+           =XIBWMMMBBBMRMBXi;,tXXRRXXXVYYt+;;: ;;;;;    
+            =iBWWMMBBMBBWBY;;;,YXRRRRXXVIi;;;:;,;;;=    
+             iXMMMMMWWBMWMY+;=+IXRRXXVYIi;:;;:,,;;=     
+             iBRBBMMMMYYXV+:,:;+XRXXVIt+;;:;++::;;;     
+             =MRRRBMMBBYtt;::::;+VXVIi=;;;:;=+;;;;=     
+              XBRBBBBBMMBRRVItttYYYYt=;;;;;;==:;=       
+               VRRRRRBRRRRXRVYYIttiti=::;:::=;=         
+                YRRRRXXVIIYIiitt+++ii=:;:::;==          
+                +XRRXIIIIYVVI;i+=;=tt=;::::;:;          
+                 tRRXXVYti++==;;;=iYt;:::::,;;          
+                  IXRRXVVVVYYItiitIIi=:::;,::;          
+                   tVXRRRBBRXVYYYIti;::::,::::          
+                    YVYVYYYYYItti+=:,,,,,:::::;         
+                    YRVI+==;;;;;:,,,,,,,:::::::  
+'''
+
+sleep 1
+echo '''   ______ _____ _____ _    _ _______ 
+ |  ____|_   _/ ____| |  | |__   __|
+ | |__    | || |  __| |__| |  | |   
+ |  __|   | || | |_ |  __  |  | |   
+ | |     _| || |__| | |  | |  | |   
+ |_|    |_____\_____|_|  |_|  |_|   
+ 
+ '''
+ sleep 1 
     echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. La MATRIX está avanzando en su conquista."
 else
-    echo "Esto es una prueba"
+    echo
 fi
 ##Usuario saca papel
 if [ "$variableUser" = "papel" ] && [ "$variableMachine" = "papel" ];
@@ -299,7 +352,7 @@ elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "spock" ];
 then  
     echo "Acabas de desautorizar a Spock y con ello contribuir a la destrucción de La MATRIX. Tú Ganas."
 else
-    echo "Esto es una prueba"
+    echo 
 fi
 
 ##Usuario saca tijeras
@@ -319,5 +372,5 @@ elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "spock" ];
 then  
     echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
 else
-    echo "Esto es una prueba"
+    echo 
 fi
