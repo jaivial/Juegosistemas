@@ -32,9 +32,8 @@ echo "5.- Sacar Spock"
 echo "6.- Cancelar partida"
 read -p "Selecciona una opción: " opcion
 
-
 ##Switch case que da un valor a la variable elegida por el usuario.
-case "$opcion" in 
+case "$opcion" in
 "1")
     echo "Has elejido Piedra"
     variableUser="piedra"
@@ -43,97 +42,93 @@ case "$opcion" in
     echo "Has elejido Papel"
     variableUser="papel"
     ;;
-"3")    
+"3")
     echo "Has elejido Tijeras"
     variableUser="tijeras"
-;;
+    ;;
 "4")
     echo "Has elejido Lagarto"
     variableUser="lagarto"
-;;
+    ;;
 "5")
     echo "Has elejido Spock"
-        variableUser="spock"
-;;
+    variableUser="spock"
+    ;;
 "6")
     echo "Vas a abandonar la partida."
     source ./menu.sh
-;;
+    ;;
 *)
     echo "La opción introducida no es correcta, teclea un número del 1 al 6."
-;;
+    ;;
 esac
 
-
 ##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
-if [ $opcion -eq 6 ]
-then
-echo ""
+if [ $opcion -eq 6 ]; then
+    echo ""
 else
-sleep 1
-num=$(( ( $RANDOM % 5 ) + 1 ))
-sleep 1
-echo "El número aleatorio elegido es: $num"
+    sleep 1
+    num=$((($RANDOM % 5) + 1))
+    sleep 1
+    echo "El número aleatorio elegido es: $num"
 fi
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
-case "$num" in 
+case "$num" in
 "1")
     sleep 0.5
     echo "La máquina ha elejido Piedra"
     variableMachine="piedra"
     ;;
 "2")
-sleep 0.5
+    sleep 0.5
     echo "La máquina ha elejido Papel"
     variableMachine="papel"
     ;;
-"3")    
-sleep 0.5
+"3")
+    sleep 0.5
     echo "La máquina ha elejido Tijeras"
     variableMachine="tijeras"
-;;
+    ;;
 "4")
-sleep 0.5
+    sleep 0.5
     echo "La máquina ha elejido Lagarto"
     variableMachine="lagarto"
-;;
+    ;;
 "5")
-sleep 0.5
+    sleep 0.5
     echo "La máquina ha elejido Spock"
     variableMachine="spock"
-;;
+    ;;
 esac
-
-
 
 ##Estructura if para enfrentar en combate cada opción y seleccionar un ganador.
 ##Usuario saca piedra
 sleep 1
-if [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "piedra" ];
-then
-    sleep 1
-    echo '''     ___
+if [ "$variableUser" = "piedra" ]; then
+    if [ "$variableMachine" = "piedra" ]; then
+        sleep 1
+        echo '''     ___
     /   \
    |  o o|
    | \_/ |
    \_____/
 '''
-sleep 1
-echo ''' 
+        sleep 1
+        echo ''' 
  __   _____ 
  \ \ / / __|
   \ V /\__ \
    \_/ |___/                                                                                                                                                                                                                                                                                        
 '''
-sleep 1
-echo '''     ___
+        sleep 1
+        echo '''     ___
     /   \
    |  o o|
    | \_/ |
    \_____/
 '''
-sleep 1
-echo '''   ______ _____ _____ _    _ _______ 
+        sleep 1
+        echo '''   ______ _____ _____ _    _ _______ 
  |  ____|_   _/ ____| |  | |__   __|
  | |__    | || |  __| |__| |  | |   
  |  __|   | || | |_ |  __  |  | |   
@@ -141,26 +136,25 @@ echo '''   ______ _____ _____ _    _ _______
  |_|    |_____\_____|_|  |_|  |_|   
  
  '''
- sleep 1
-    echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
-elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "papel" ];
-then 
- sleep 1
-    echo '''     ___
+        sleep 1
+        echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
+    elif [ "$variableMachine" = "papel" ]; then
+        sleep 1
+        echo '''     ___
     /   \
    |  o o|
    | \_/ |
    \_____/
 '''
-sleep 1
-echo ''' 
+        sleep 1
+        echo ''' 
  __   _____ 
  \ \ / / __|
   \ V /\__ \
    \_/ |___/                                                                                                                                                                                                                                                                                        
 '''
-sleep 1
-echo '''  
+        sleep 1
+        echo '''  
  _________
 |         |
 |  papel  |
@@ -168,8 +162,8 @@ echo '''
 |_________|
 
 '''
-sleep 1
-echo '''   ______ _____ _____ _    _ _______ 
+        sleep 1
+        echo '''   ______ _____ _____ _    _ _______ 
  |  ____|_   _/ ____| |  | |__   __|
  | |__    | || |  __| |__| |  | |   
  |  __|   | || | |_ |  __  |  | |   
@@ -177,26 +171,25 @@ echo '''   ______ _____ _____ _    _ _______
  |_|    |_____\_____|_|  |_|  |_|   
  
  '''
- sleep 1 
-    echo "Gana la máquina porque papel gana a piedra. JAJAJAJAJ PUTO PERDEDOR ESPABILA"
-elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "tijeras" ];
-then  
-sleep 1
-    echo '''     ___
+        sleep 1
+        echo "Gana la máquina porque papel gana a piedra. JAJAJAJAJ PUTO PERDEDOR ESPABILA"
+    elif [ "$variableMachine" = "tijeras" ]; then
+        sleep 1
+        echo '''     ___
     /   \
    |  o o|
    | \_/ |
    \_____/
 '''
-sleep 1
-echo ''' 
+        sleep 1
+        echo ''' 
  __   _____ 
  \ \ / / __|
   \ V /\__ \
    \_/ |___/                                                                                                                                                                                                                                                                                        
 '''
-sleep 1
-echo '''                                                                                  
+        sleep 1
+        echo '''                                                                                  
                                               ▒▒▒▒▒▒                
                                           ▒▒▒▒░░░░▒▒                
                                         ▒▒░░░░░░▒▒                  
@@ -219,8 +212,8 @@ echo '''
           ██▒▒░░▒▒░░▒▒▓▓                                            
             ████████▓▓                                              
 '''
-sleep 1
-echo '''   ______ _____ _____ _    _ _______ 
+        sleep 1
+        echo '''   ______ _____ _____ _    _ _______ 
  |  ____|_   _/ ____| |  | |__   __|
  | |__    | || |  __| |__| |  | |   
  |  __|   | || | |_ |  __  |  | |   
@@ -228,27 +221,26 @@ echo '''   ______ _____ _____ _    _ _______
  |_|    |_____\_____|_|  |_|  |_|   
  
  '''
- sleep 1 
-    echo "Enohorabuena ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la MATRIX"
-    elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "lagarto" ];
-then  
- sleep 1
-    echo '''     ___
+        sleep 1
+        echo "Enohorabuena ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la MATRIX"
+    elif [ "$variableMachine" = "lagarto" ]; then
+        sleep 1
+        echo '''     ___
     /   \
    |  o o|
    | \_/ |
    \_____/
 '''
-sleep 1
-echo ''' 
+        sleep 1
+        echo ''' 
  __   _____ 
  \ \ / / __|
   \ V /\__ \
    \_/ |___/                                                                                                                                                                                                                                                                                        
 '''
-sleep 1
+        sleep 1
 
-echo '''
+        echo '''
 
       ████                                                    
 ████████████                                                  
@@ -270,8 +262,8 @@ echo '''
             ████████████                                      
 
 '''
-sleep 1
-echo '''   ______ _____ _____ _    _ _______ 
+        sleep 1
+        echo '''   ______ _____ _____ _    _ _______ 
  |  ____|_   _/ ____| |  | |__   __|
  | |__    | || |  __| |__| |  | |   
  |  __|   | || | |_ |  __  |  | |   
@@ -279,26 +271,25 @@ echo '''   ______ _____ _____ _    _ _______
  |_|    |_____\_____|_|  |_|  |_|   
  
  '''
-    echo "Enohorabuena ganas tú con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
-elif [ "$variableUser" = "piedra" ] && [ "$variableMachine" = "spock" ];
-then  
-sleep 1
-    echo '''     ___
+        echo "Enohorabuena ganas tú con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
+    elif [ "$variableMachine" = "spock" ]; then
+        sleep 1
+        echo '''     ___
     /   \
    |  o o|
    | \_/ |
    \_____/
 '''
-sleep 1
-echo ''' 
+        sleep 1
+        echo ''' 
  __   _____ 
  \ \ / / __|
   \ V /\__ \
    \_/ |___/                                                                                                                                                                                                                                                                                        
 '''
-sleep 1
+        sleep 1
 
-echo '''
+        echo '''
 **************************************++++++++++++++++++++++++++++++++++++++=-=----.:.::::::::-==++++++++++++++++++***********************************
 **************************************++++++++++++++++++++++++++++++++++++=--=-..:-...:.........:-=+++++++++++++++++**********************************
 **************************************++++++++++++++++++++++++++++++++=-=-:..::..:-=----:.........:-=+++++++++++++++**********************************
@@ -424,8 +415,8 @@ echo '''
 
 '''
 
-sleep 1
-echo '''   ______ _____ _____ _    _ _______ 
+        sleep 1
+        echo '''   ______ _____ _____ _    _ _______ 
  |  ____|_   _/ ____| |  | |__   __|
  | |__    | || |  __| |__| |  | |   
  |  __|   | || | |_ |  __  |  | |   
@@ -433,87 +424,76 @@ echo '''   ______ _____ _____ _    _ _______
  |_|    |_____\_____|_|  |_|  |_|   
  
  '''
- sleep 1 
-    echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. La MATRIX está avanzando en su conquista."
-else
-    echo
+        sleep 1
+        echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. La MATRIX está avanzando en su conquista."
+    else
+        echo
+    fi
 fi
 ##Usuario saca papel
-if [ "$variableUser" = "papel" ] && [ "$variableMachine" = "papel" ];
-then
-    echo "¡Tablas! Habéis quedado empate. Los papeles unen fuerzas para formar un folio pero ninguno gana."
-elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "piedra" ];
-then  
-    echo "En una ardúa batalla consigues enrrollar a la piedra con tu papel. Sales victorioso por esta vez..."
-elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "tijeras" ];
-then  
-    echo "En un intento de ataque, la tijera te ha partido brutalmente en dos. ¿En serio pensabas ganar a unas tijeras usando un papel? Pierdes la partida XD"
-    elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "lagarto" ];
-then  
-    echo "Un lagarto enorme acaba de devorarte. Has contribuido a que continue la cadena alimenticia, pero pierdes la partida."
-elif [ "$variableUser" = "papel" ] && [ "$variableMachine" = "spock" ];
-then  
-    echo "Acabas de desautorizar a Spock y con ello contribuir a la destrucción de La MATRIX. Tú Ganas."
-else
-    echo 
+if [ "$variableUser" = "papel" ]; then
+    if [ "$variableMachine" = "papel" ]; then
+        echo "¡Tablas! Habéis quedado empate. Los papeles unen fuerzas para formar un folio pero ninguno gana."
+    elif [ "$variableMachine" = "piedra" ]; then
+        echo "En una ardúa batalla consigues enrrollar a la piedra con tu papel. Sales victorioso por esta vez..."
+    elif [ "$variableMachine" = "tijeras" ]; then
+        echo "En un intento de ataque, la tijera te ha partido brutalmente en dos. ¿En serio pensabas ganar a unas tijeras usando un papel? Pierdes la partida XD"
+    elif [ "$variableMachine" = "lagarto" ]; then
+        echo "Un lagarto enorme acaba de devorarte. Has contribuido a que continue la cadena alimenticia, pero pierdes la partida."
+    elif [ "$variableMachine" = "spock" ]; then
+        echo "Acabas de desautorizar a Spock y con ello contribuir a la destrucción de La MATRIX. Tú Ganas."
+    else
+        echo
+    fi
 fi
 
 ##Usuario saca tijeras
-if [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "tijeras" ];
-then
-    echo "¡Tablas! Haceis la tijera, ambas disfrutáis asi que no gana nadie."
-elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "piedra" ];
-then  
-    echo "Te impacta una piedra desde el cielo. La piedra te destroza física y emocionalmente, caes en depresión y pierdes la partida."
-elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "papel" ];
-then  
-    echo "Un papel con aires de superioridad se acerca a ti. Sin ni siquiera inmutarte lo partes por la mitad. Tú Ganas."
-    elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "lagarto" ];
-then  
-    echo "Te encuentras con un lagarto diminuto y le cortas la cabeza a sangre fría. Eres un monstruo sin sentimientos... pero has ganado la partida."
-elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "spock" ];
-then  
-    echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
-else
-    echo 
+if [ "$variableUser" = "tijeras" ]; then
+    if [ "$variableMachine" = "tijeras" ]; then
+        echo "¡Tablas! Haceis la tijera, ambas disfrutáis asi que no gana nadie."
+    elif [ "$variableMachine" = "piedra" ]; then
+        echo "Te impacta una piedra desde el cielo. La piedra te destroza física y emocionalmente, caes en depresión y pierdes la partida."
+    elif [ "$variableMachine" = "papel" ]; then
+        echo "Un papel con aires de superioridad se acerca a ti. Sin ni siquiera inmutarte lo partes por la mitad. Tú Ganas."
+    elif [ "$variableMachine" = "lagarto" ]; then
+        echo "Te encuentras con un lagarto diminuto y le cortas la cabeza a sangre fría. Eres un monstruo sin sentimientos... pero has ganado la partida."
+    elif [ "$variableMachine" = "spock" ]; then
+        echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
+    else
+        echo
+    fi
 fi
 
 ##Usuario saca lagarto
-if [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "tijeras" ];
-then
-    echo "Intentas atacar a las tijeras. Están roñosas y te contagian con tétanos. Además te corta la cabeza JAJAJAJAJ. Has perdido."
-elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "piedra" ];
-then  
-    echo "Hay una piedra enorme pero en tu intento de atacar te machaca contra el suelo mientras se ríe. Menuda piedra más rara. Has perdido."
-elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "papel" ];
-then  
-    echo "Ves un cachito inofensivo de papel. Devoras vilmente al papelito A4. Has ganado, obviamente."
-elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "lagarto" ];
-then  
-    echo "Parece que te estás mirando al espejo. Ah no, es otro lagarto. Empate porque se ponen a copular como seres no racionales."
-elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "spock" ];
-then  
-    echo "Envenenas al pavo este raro. Mírale las cejas, qué raro coño. Has ganado."
-else
-    echo 
+if [ "$variableUser" = "lagarto" ]; then
+    if [ "$variableMachine" = "tijeras" ]; then
+        echo "Intentas atacar a las tijeras. Están roñosas y te contagian con tétanos. Además te corta la cabeza JAJAJAJAJ. Has perdido."
+    elif [ "$variableMachine" = "piedra" ]; then
+        echo "Hay una piedra enorme pero en tu intento de atacar te machaca contra el suelo mientras se ríe. Menuda piedra más rara. Has perdido."
+    elif [ "$variableMachine" = "papel" ]; then
+        echo "Ves un cachito inofensivo de papel. Devoras vilmente al papelito A4. Has ganado, obviamente."
+    elif [ "$variableMachine" = "lagarto" ]; then
+        echo "Parece que te estás mirando al espejo. Ah no, es otro lagarto. Empate porque se ponen a copular como seres no racionales."
+    elif [ "$variableMachine" = "spock" ]; then
+        echo "Envenenas al pavo este raro. Mírale las cejas, qué raro coño. Has ganado."
+    else
+        echo
+    fi
 fi
 
 ##Usuario saca spock
-if [ "$variableUser" = "spock" ] && [ "$variableMachine" = "tijeras" ];
-then
-    echo "Unas tijeras intentan cortarte los dedos pero son de punta redondeada y no tienen filo. Las partes por la mitad, de locos. Has ganado."
-elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "piedra" ];
-then  
-    echo "Un cacho de mineral te ataca pero con tus poderes la vaporizas de alguna manera incomprensible. De verdad, que chaval más raro. Has ganado."
-elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "papel" ];
-then  
-    echo "Parece un papelucho sin autoridad pero resulta que es una carta del Alto Mando. Has sido desautorizado y te suicidas porque tu vida ya no tiene sentido. Has perdido."
-elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "lagarto" ];
-then  
-    echo "AAAAAAAAAAAA un lagarto. Te mueres envenenado, has perdido."
-elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "spock" ];
-then  
-    echo "\"Joder mira que eres feo\" te dice tu gemelo. Os liáis como julandrones y acaba en empate."
-else
-    echo 
+if [ "$variableUser" = "spock" ]; then
+    if [ "$variableMachine" = "tijeras" ]; then
+        echo "Unas tijeras intentan cortarte los dedos pero son de punta redondeada y no tienen filo. Las partes por la mitad, de locos. Has ganado."
+    elif [ "$variableMachine" = "piedra" ]; then
+        echo "Un cacho de mineral te ataca pero con tus poderes la vaporizas de alguna manera incomprensible. De verdad, que chaval más raro. Has ganado."
+    elif [ "$variableMachine" = "papel" ]; then
+        echo "Parece un papelucho sin autoridad pero resulta que es una carta del Alto Mando. Has sido desautorizado y te suicidas porque tu vida ya no tiene sentido. Has perdido."
+    elif [ "$variableMachine" = "lagarto" ]; then
+        echo "AAAAAAAAAAAA un lagarto. Te mueres envenenado, has perdido."
+    elif [ "$variableMachine" = "spock" ]; then
+        echo "\"Joder mira que eres feo\" te dice tu gemelo. Os liáis como julandrones y acaba en empate."
+    else
+        echo
+    fi
 fi
