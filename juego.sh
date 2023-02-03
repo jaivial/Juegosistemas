@@ -69,8 +69,6 @@ if [ $opcion -eq 6 ]; then
 else
     sleep 1
     num=$((($RANDOM % 5) + 1))
-    sleep 1
-    echo "El número aleatorio elegido es: $num"
 fi
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
@@ -419,7 +417,7 @@ if [ "$variableUser" = "tijeras" ]; then
     sleep 1
     echo "${array[6]}"
     sleep 1
-    echo "${array[6]}"
+    echo "${array[2]}"
     sleep 1
         echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
     else
