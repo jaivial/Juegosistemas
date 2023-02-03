@@ -1,5 +1,5 @@
 #!/bin/bash
-
+clear
 echo "BIENVENIDO/A AL JUEGO DE PIEDRA PAPEL TIJERA LAGARTO SPOCK"
 echo "=========================================================="
 echo "1.- INICIAR JUEGO"
