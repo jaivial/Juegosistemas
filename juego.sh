@@ -57,7 +57,7 @@ case "$opcion" in
 ;;
 "6")
     echo "Vas a abandonar la partida."
-    source menu.sh
+    source ./menu.sh
 ;;
 *)
     echo "La opción introducida no es correcta, teclea un número del 1 al 6."
@@ -67,11 +67,15 @@ esac
 
 
 ##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
+if [ $opcion -eq 6 ]
+then
+echo ""
+else
 sleep 1
 num=$(( ( $RANDOM % 5 ) + 1 ))
 sleep 1
 echo "El número aleatorio elegido es: $num"
-
+fi
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in 
 "1")
