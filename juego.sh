@@ -56,7 +56,9 @@ case "$opcion" in
     ;;
 "6")
     echo "Vas a abandonar la partida."
-    source ./menu.sh
+    sleep 1
+    clear
+    bash menu.sh
     ;;
 *)
     echo "La opción introducida no es correcta, teclea un número del 1 al 6."
