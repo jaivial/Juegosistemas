@@ -102,6 +102,15 @@ case "$num" in
 esac
 
 ##Array de imagenes ascii para hacer más simple el código de else-if de combate
+## posición del array e imagen:
+##    [0] = piedra
+##    [1] = vs
+##    [2] = fight
+##    [3] = papel
+##    [4] = tijeras
+##    [5] = lagarto
+##    [6] = spock
+   
 array=('''     ___
     /   \
    |  o o|
@@ -296,6 +305,14 @@ array=('''     ___
 ''')
 ##Estructura if para enfrentar en combate cada opción y seleccionar un ganador.
 ##Usuario saca piedra
+## posición del array e imagen:
+##    [0] = piedra
+##    [1] = vs
+##    [2] = fight
+##    [3] = papel
+##    [4] = tijeras
+##    [5] = lagarto
+##    [6] = spock
 sleep 1
 if [ "$variableUser" = "piedra" ]; then
     if [ "$variableMachine" = "piedra" ]; then
@@ -330,7 +347,6 @@ if [ "$variableUser" = "piedra" ]; then
     sleep 1
     echo "${array[2]}"
     sleep 1
-        
         echo "Enohorabuena ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la MATRIX"
     elif [ "$variableMachine" = "lagarto" ]; then
     sleep 1
@@ -359,6 +375,14 @@ if [ "$variableUser" = "piedra" ]; then
     fi
 fi
 ##Usuario saca papel
+## posición del array e imagen:
+##    [0] = piedra
+##    [1] = vs
+##    [2] = fight
+##    [3] = papel
+##    [4] = tijeras
+##    [5] = lagarto
+##    [6] = spock
 if [ "$variableUser" = "papel" ]; then
     if [ "$variableMachine" = "papel" ]; then
     sleep 1
@@ -421,6 +445,14 @@ if [ "$variableUser" = "papel" ]; then
 fi
 
 ##Usuario saca tijeras
+## posición del array e imagen:
+##    [0] = piedra
+##    [1] = vs
+##    [2] = fight
+##    [3] = papel
+##    [4] = tijeras
+##    [5] = lagarto
+##    [6] = spock
 if [ "$variableUser" = "tijeras" ]; then
     if [ "$variableMachine" = "tijeras" ]; then
     sleep 1
@@ -483,6 +515,14 @@ if [ "$variableUser" = "tijeras" ]; then
 fi
 
 ##Usuario saca lagarto
+## posición del array e imagen:
+##    [0] = piedra
+##    [1] = vs
+##    [2] = fight
+##    [3] = papel
+##    [4] = tijeras
+##    [5] = lagarto
+##    [6] = spock
 if [ "$variableUser" = "lagarto" ]; then
     if [ "$variableMachine" = "tijeras" ]; then
     sleep 1
@@ -501,7 +541,7 @@ if [ "$variableUser" = "lagarto" ]; then
     sleep 1
     echo "${array[1]}"
     sleep 1
-    echo "${array[4]}"
+    echo "${array[0]}"
     sleep 1
     echo "${array[2]}"
     sleep 1
@@ -545,6 +585,14 @@ if [ "$variableUser" = "lagarto" ]; then
 fi
 
 ##Usuario saca spock
+## posición del array e imagen:
+##    [0] = piedra
+##    [1] = vs
+##    [2] = fight
+##    [3] = papel
+##    [4] = tijeras
+##    [5] = lagarto
+##    [6] = spock
 if [ "$variableUser" = "spock" ]; then
     if [ "$variableMachine" = "tijeras" ]; then
     sleep 1
@@ -598,7 +646,7 @@ if [ "$variableUser" = "spock" ]; then
     sleep 1
     echo "${array[4]}"
     sleep 1
-    echo "${array[6]}"
+    echo "${array[2]}"
     sleep 1
         echo "\"Joder mira que eres feo\" te dice tu gemelo. Os liáis como julandrones y acaba en empate."
     else
