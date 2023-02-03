@@ -56,7 +56,8 @@ case "$opcion" in
     variableUser="spock"
     ;;
 "6")
-    echo "Vas a abandonar la partida."
+    echo "Saliendo al menú..."
+    exit
     source ./menu.sh
     ;;
 *)
