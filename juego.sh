@@ -69,8 +69,6 @@ if [ $opcion -eq 6 ]; then
 else
     sleep 1
     num=$((($RANDOM % 5) + 1))
-    sleep 1
-    echo "El número aleatorio elegido es: $num"
 fi
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
