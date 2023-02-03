@@ -70,8 +70,8 @@ if [ $opcion -eq 6 ]; then
 else
     sleep 1
     num=$((($RANDOM % 5) + 1))
-fi
-##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
+
+    ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
 "1")
     sleep 0.5
@@ -572,3 +572,4 @@ case $respuesta in
     *) echo "Error. Introduce Y o N." ;;
   esac
 done
+fi
