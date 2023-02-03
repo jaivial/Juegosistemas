@@ -42,8 +42,7 @@ case "$opcion" in
     bash papel.sh
     ;;
 "3")
-    echo "Has elegido Tijeras"
-    variableUser="tijeras"
+    bash tijeras.sh
     ;;
 "4")
     bash lagarto.sh

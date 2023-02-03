@@ -96,7 +96,7 @@ if [ "$variableMachine" = "papel" ]; then
     else
         echo
     fi
-fi
+
 
 read -p "¿Quieres jugar otra partida? (Y/N): " respuesta
 case $respuesta in
