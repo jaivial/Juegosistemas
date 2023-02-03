@@ -56,9 +56,12 @@ case "$opcion" in
     variableUser="spock"
     ;;
 "6")
-    echo "Saliendo al menú..."
+
+    echo "Saliendo al menu..."
+    sleep 1
+    clear
+    bash menu.sh
     exit
-    source ./menu.sh
     ;;
 *)
     echo "La opción introducida no es correcta, teclea un número del 1 al 6."
@@ -71,8 +74,8 @@ if [ $opcion -eq 6 ]; then
 else
     sleep 1
     num=$((($RANDOM % 5) + 1))
-fi
-##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
+
+    ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
 "1")
     sleep 0.5
@@ -573,3 +576,4 @@ case $respuesta in
     *) echo "Error. Introduce Y o N." ;;
   esac
 done
+fi
