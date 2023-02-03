@@ -34,6 +34,7 @@ esac
 
 if [ "$variableMachine" = "tijeras" ]; then
     sleep 1
+    source array.sh
     echo "${array[4]}"
     sleep 1
     echo "${array[1]}"
@@ -45,6 +46,7 @@ if [ "$variableMachine" = "tijeras" ]; then
         echo "¡Tablas! Haceis la tijera, ambas disfrutáis asi que no gana nadie."
     elif [ "$variableMachine" = "piedra" ]; then
     sleep 1
+    source array.sh
     echo "${array[4]}"
     sleep 1
     echo "${array[1]}"
@@ -56,6 +58,7 @@ if [ "$variableMachine" = "tijeras" ]; then
         echo "Te impacta una piedra desde el cielo. La piedra te destroza física y emocionalmente, caes en depresión y pierdes la partida."
     elif [ "$variableMachine" = "papel" ]; then
     sleep 1
+    source array.sh
     echo "${array[4]}"
     sleep 1
     echo "${array[1]}"
@@ -67,6 +70,7 @@ if [ "$variableMachine" = "tijeras" ]; then
         echo "Un papel con aires de superioridad se acerca a ti. Sin ni siquiera inmutarte lo partes por la mitad. Tú Ganas."
     elif [ "$variableMachine" = "lagarto" ]; then
     sleep 1
+    source array.sh
     echo "${array[4]}"
     sleep 1
     echo "${array[1]}"
@@ -78,6 +82,7 @@ if [ "$variableMachine" = "tijeras" ]; then
         echo "Te encuentras con un lagarto diminuto y le cortas la cabeza a sangre fría. Eres un monstruo sin sentimientos... pero has ganado la partida."
     elif [ "$variableMachine" = "spock" ]; then
     sleep 1
+    source array.sh
     echo "${array[4]}"
     sleep 1
     echo "${array[1]}"
