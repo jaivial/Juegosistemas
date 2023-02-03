@@ -39,8 +39,7 @@ case "$opcion" in
     bash piedra.sh
     ;;
 "2")
-    echo "Has elegido Papel"
-    variableUser="papel"
+    bash papel.sh
     ;;
 "3")
     echo "Has elegido Tijeras"
@@ -67,10 +66,3 @@ case "$opcion" in
     bash juego.sh
     ;;
 esac
-
-
-
-
-
-
-
