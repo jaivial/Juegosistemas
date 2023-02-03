@@ -68,12 +68,9 @@ case "$opcion" in
     ;;
 esac
 
-##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
-if [ $opcion -eq 6 ]; then
-    echo ""
-else
-    sleep 1
-    num=$((($RANDOM % 5) + 1))
+
+sleep 1
+num=$((($RANDOM % 5) + 1))
 
     ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
@@ -576,4 +573,3 @@ case $respuesta in
     *) echo "Error. Introduce Y o N." ;;
   esac
 done
-fi
