@@ -14,13 +14,13 @@ case "$eleccion" in
     echo "Iniciando Partida"
     sleep 1
     clear
-    bash juegopruebas.sh
+    bash juego.sh
     ;;
 "2")
     echo "Abriendo Reglas"
     sleep 1
     clear
-    bash reglaspruebas.sh
+    bash reglas.sh
     ;;
 "3")
     echo "Saliendo del Juego."
