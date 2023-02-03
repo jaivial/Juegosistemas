@@ -11,3 +11,7 @@ echo "Lagarto envenena a Spock"
 echo "Lagarto devora a papel"
 echo "Spock rompe a tijera"
 echo "Spock vaporiza a piedra"
+echo ""
+
+read -p "Pulsa cualquier tecla para salir"
+bash menu.sh
