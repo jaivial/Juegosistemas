@@ -506,7 +506,7 @@ if [ "$variableUser" = "tijeras" ]; then
     sleep 1
     echo "${array[6]}"
     sleep 1
-    echo "${array[6]}"
+    echo "${array[2]}"
     sleep 1
         echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
     else
