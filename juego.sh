@@ -65,7 +65,6 @@ case "$opcion" in
 esac
 
 
-
 ##Función que elige un número aleatorio del 1 al 5, es la opción que elige la máquina.
 sleep 1
 num=$(( ( $RANDOM % 5 ) + 1 ))
@@ -472,6 +471,46 @@ then
 elif [ "$variableUser" = "tijeras" ] && [ "$variableMachine" = "spock" ];
 then  
     echo "Spock te rompe. Ni siquiera ha necesitado usar sus poderes psíquicos... Eres débil, pierdes la partida."
+else
+    echo 
+fi
+
+##Usuario saca lagarto
+if [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "tijeras" ];
+then
+    echo "Intentas atacar a las tijeras. Están roñosas y te contagian con tétanos. Además te corta la cabeza JAJAJAJAJ. Has perdido."
+elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "piedra" ];
+then  
+    echo "Hay una piedra enorme pero en tu intento de atacar te machaca contra el suelo mientras se ríe. Menuda piedra más rara. Has perdido."
+elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "papel" ];
+then  
+    echo "Ves un cachito inofensivo de papel. Devoras vilmente al papelito A4. Has ganado, obviamente."
+elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "lagarto" ];
+then  
+    echo "Parece que te estás mirando al espejo. Ah no, es otro lagarto. Empate porque se ponen a copular como seres no racionales."
+elif [ "$variableUser" = "lagarto" ] && [ "$variableMachine" = "spock" ];
+then  
+    echo "Envenenas al pavo este raro. Mírale las cejas, qué raro coño. Has ganado."
+else
+    echo 
+fi
+
+##Usuario saca spock
+if [ "$variableUser" = "spock" ] && [ "$variableMachine" = "tijeras" ];
+then
+    echo "Unas tijeras intentan cortarte los dedos pero son de punta redondeada y no tienen filo. Las partes por la mitad, de locos. Has ganado."
+elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "piedra" ];
+then  
+    echo "Un cacho de mineral te ataca pero con tus poderes la vaporizas de alguna manera incomprensible. De verdad, que chaval más raro. Has ganado."
+elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "papel" ];
+then  
+    echo "Parece un papelucho sin autoridad pero resulta que es una carta del Alto Mando. Has sido desautorizado y te suicidas porque tu vida ya no tiene sentido. Has perdido."
+elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "lagarto" ];
+then  
+    echo "AAAAAAAAAAAA un lagarto. Te mueres envenenado, has perdido."
+elif [ "$variableUser" = "spock" ] && [ "$variableMachine" = "spock" ];
+then  
+    echo "\"Joder mira que eres feo\" te dice tu gemelo. Os liáis como julandrones y acaba en empate."
 else
     echo 
 fi
