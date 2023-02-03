@@ -1,5 +1,6 @@
 #!/bin/bash
 
+while true; do
 echo '''
     ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠲⠶⢤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠖⠒⢶⣄⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⢀⡾⠁⠀⣀⠔⠁⠀⠀⠈⠙⠷⣤⠦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠋⠀⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀
@@ -71,8 +72,8 @@ if [ $opcion -eq 6 ]; then
 else
     sleep 1
     num=$((($RANDOM % 5) + 1))
-fi
-##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
+
+    ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
 "1")
     sleep 0.5
@@ -565,4 +566,12 @@ if [ "$variableUser" = "spock" ]; then
     else
         echo
     fi
+fi
+read -p "¿Quieres jugar otra partida? (Y/N): " respuesta
+case $respuesta in
+    [Yy]*) true ;;
+    [Nn]*) exit ;;
+    *) echo "Error. Introduce Y o N." ;;
+  esac
+done
 fi
