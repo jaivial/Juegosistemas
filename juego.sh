@@ -569,7 +569,7 @@ fi
 read -p "¿Quieres jugar otra partida? (Y/N): " respuesta
 case $respuesta in
     [Yy]*) true ;;
-    [Nn]*) exit ;;
+    [Nn]*) clear bash menu.sh ;;
     *) echo "Error. Introduce Y o N." ;;
   esac
 done
