@@ -14,4 +14,5 @@ echo "Spock vaporiza a piedra"
 echo ""
 
 read -p "Pulsa cualquier tecla para salir"
+clear
 bash menu.sh
