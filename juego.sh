@@ -568,7 +568,7 @@ if [ "$variableUser" = "spock" ]; then
 fi
 read -p "¿Quieres jugar otra partida? (Y/N): " respuesta
 case $respuesta in
-    [Yy]*) true ;;
+    [Yy]*) true clear ;;
     [Nn]*) clear bash menu.sh ;;
     *) echo "Error. Introduce Y o N." ;;
   esac
