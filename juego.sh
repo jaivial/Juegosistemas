@@ -1,5 +1,6 @@
 #!/bin/bash
 
+while true; do
 echo '''
     ⠀⠀⠀⠀⠀⣠⡴⠖⠒⠲⠶⢤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠖⠒⢶⣄⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⢀⡾⠁⠀⣀⠔⠁⠀⠀⠈⠙⠷⣤⠦⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡼⠋⠀⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀
@@ -564,3 +565,10 @@ if [ "$variableUser" = "spock" ]; then
         echo
     fi
 fi
+read -p "¿Quieres jugar otra partida? (Y/N): " respuesta
+case $respuesta in
+    [Yy]*) true ;;
+    [Nn]*) exit ;;
+    *) echo "Error. Introduce Y o N." ;;
+  esac
+done
