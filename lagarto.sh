@@ -7,22 +7,22 @@ num=$((($RANDOM % 5) + 1))
 case "$num" in
 "1")
     sleep 0.5
-    echo "La máquina ha elegido Piedra"
+    echo "La máquina ha elegido piedra"
     variableMachine="piedra"
     ;;
 "2")
     sleep 0.5
-    echo "La máquina ha elegido Papel"
+    echo "La máquina ha elegido papel"
     variableMachine="papel"
     ;;
 "3")
     sleep 0.5
-    echo "La máquina ha elegido Tijeras"
+    echo "La máquina ha elegido tijeras"
     variableMachine="tijeras"
     ;;
 "4")
     sleep 0.5
-    echo "La máquina ha elegido Lagarto"
+    echo "La máquina ha elegido lagarto"
     variableMachine="lagarto"
     ;;
 "5")
@@ -45,8 +45,8 @@ esac
     sleep 1
         echo "Intentas atacar a las tijeras. Están roñosas y te contagian con tétanos. Además te corta la cabeza JAJAJAJAJ. Has perdido."
     elif [ "$variableMachine" = "piedra" ]; then
-     sleep 1
-       source array.sh 
+    sleep 1
+    source array.sh 
     echo "${array[5]}"
     sleep 1
     echo "${array[1]}"

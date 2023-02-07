@@ -7,22 +7,22 @@ num=$((($RANDOM % 5) + 1))
 case "$num" in
 "1")
     sleep 0.5
-    echo "La máquina ha elegido Piedra"
+    echo "La máquina ha elegido piedra"
     variableMachine="piedra"
     ;;
 "2")
     sleep 0.5
-    echo "La máquina ha elegido Papel"
+    echo "La máquina ha elegido papel"
     variableMachine="papel"
     ;;
 "3")
     sleep 0.5
-    echo "La máquina ha elegido Tijeras"
+    echo "La máquina ha elegido tijeras"
     variableMachine="tijeras"
     ;;
 "4")
     sleep 0.5
-    echo "La máquina ha elegido Lagarto"
+    echo "La máquina ha elegido lagarto"
     variableMachine="lagarto"
     ;;
 "5")
@@ -43,7 +43,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "¡Tablas! Habéis quedado empate. Las dos piedras chocan pero ninguna gana"
+        echo "Las dos piedras chocan pero ninguna gana. Has quedado empate."
     elif [ "$variableMachine" = "papel" ]; then
     sleep 1
     source array.sh 
@@ -55,7 +55,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Gana la máquina porque papel gana a piedra. JAJAJAJAJ PUTO PERDEDOR ESPABILA"
+        echo "Gana la máquina porque papel envuelve a la piedra. JAJAJAJAJ PUTO PERDEDOR ESPABILA"
     elif [ "$variableMachine" = "tijeras" ]; then
     sleep 1
     source array.sh 
@@ -67,7 +67,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Enohorabuena ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la MATRIX"
+        echo "Enohorabuena, ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la máquina."
     elif [ "$variableMachine" = "lagarto" ]; then
     sleep 1
     source array.sh 
@@ -79,7 +79,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Enohorabuena ganas tú con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
+        echo "Enhorabuena, ganas tú, con la piedra le abriste la cabeza al lagarto hasta hacer mermelada con sus sesos."
     elif [ "$variableMachine" = "spock" ]; then
     sleep 1
     source array.sh 
@@ -91,7 +91,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. La MATRIX está avanzando en su conquista."
+        echo "Intentase tirarle la piedra a Spock, pero él la paró con sus poderes psíquicos y gana la máquina. Está avanzando en su conquista."
     else
         echo
     fi
