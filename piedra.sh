@@ -67,7 +67,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Enohorabuena, ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la máquina."
+        echo "Enhorabuena, ganas tú porque la piedra destroza a las tijeras. Sigue así para impedir que gane la máquina."
     elif [ "$variableMachine" = "lagarto" ]; then
     sleep 1
     source array.sh 
