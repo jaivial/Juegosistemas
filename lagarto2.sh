@@ -1,14 +1,14 @@
 #!/bin/bash
+echo ""
 echo "| JUGADOR 2 |"
-echo "| PIEDRA | PAPEL | TIJERAS | LAGARTO | SPOCK |"
-echo "=============================================="
+echo "-------------"
 echo "1.- Sacar Piedra"
 echo "2.- Sacar Papel"
 echo "3.- Sacar Tijeras"
 echo "4.- Sacar Lagarto"
 echo "5.- Sacar Spock"
-read -p "Selecciona una opción: " num
-
+read -sp "Selecciona una opción: " num
+echo " "
 echo "El jugador 1 ha elegido Lagarto"
 
     ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
