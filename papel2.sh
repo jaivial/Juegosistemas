@@ -41,7 +41,7 @@ case "$num" in
     echo "La opción introducida no es correcta, teclea un número del 1 al 5."
     sleep 2
     clear
-    bash juego2.sh
+    bash papel2.sh
     ;;
 esac
 
