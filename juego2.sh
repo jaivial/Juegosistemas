@@ -33,7 +33,7 @@ echo "3.- Sacar Tijeras"
 echo "4.- Sacar Lagarto"
 echo "5.- Sacar Spock"
 echo "6.- Cancelar partida"
-read -sp "Selecciona una opción: " opcion
+read -sp "Selecciona una opción (no se muestra en pantalla para evitar trampas): " opcion
 echo " "
 
 ##Switch case que da un valor a la variable elegida por el usuario.
