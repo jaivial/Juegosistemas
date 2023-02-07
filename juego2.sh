@@ -35,6 +35,7 @@ echo "5.- Sacar Spock"
 echo "6.- Cancelar partida"
 read -sp "Selecciona una opción: " opcion
 echo " "
+
 ##Switch case que da un valor a la variable elegida por el usuario.
 case "$opcion" in
 "1")
