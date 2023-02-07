@@ -1,35 +1,48 @@
 #!/bin/bash
+echo "| JUGADOR 2 |"
+echo "| PIEDRA | PAPEL | TIJERAS | LAGARTO | SPOCK |"
+echo "=============================================="
+echo "1.- Sacar Piedra"
+echo "2.- Sacar Papel"
+echo "3.- Sacar Tijeras"
+echo "4.- Sacar Lagarto"
+echo "5.- Sacar Spock"
+read -p "Selecciona una opción: " num
 
-echo "Has elegido spock."
-sleep 0.5
-num=$((($RANDOM % 5) + 1))
+echo "El jugador 1 ha elegido spock"
 
 ##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
 "1")
     sleep 0.5
-    echo "La máquina ha elegido piedra"
+    echo "El jugador 2 ha elegido piedra"
     variableMachine="piedra"
     ;;
 "2")
     sleep 0.5
-    echo "La máquina ha elegido papel"
+    echo "El jugador 2 ha elegido papel"
     variableMachine="papel"
     ;;
 "3")
     sleep 0.5
-    echo "La máquina ha elegido tijeras"
+    echo "El jugador 2 ha elegido tijeras"
     variableMachine="tijeras"
     ;;
 "4")
     sleep 0.5
-    echo "La máquina ha elegido lagarto"
+    echo "El jugador 2 ha elegido lagarto"
     variableMachine="lagarto"
     ;;
 "5")
     sleep 0.5
-    echo "La máquina ha elegido Spock"
+    echo "El jugador 2 ha elegido Spock"
     variableMachine="spock"
+    ;;
+*)
+    echo "La opción introducida no es correcta, teclea un número del 1 al 5."
+    sleep 2
+    clear
+    bash juego2.sh
     ;;
 esac
 
@@ -44,7 +57,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Unas tijeras intentan cortarte los dedos pero son de punta redondeada y no tienen filo. Las partes por la mitad, de locos. Has ganado."
+        echo "El jugador 2 coge unas tijeras y intenta cortarle la cabeza al jugador 1, pero son del chino y no sirven ni para cortar un folio, asique el jugador 1 se limpia el culo con ellas y las partes por la mitad. Jugador 1 ha ganado."
     elif [ "$variableMachine" = "piedra" ]; then
     sleep 1
     source array.sh 
@@ -56,7 +69,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Un cacho de mineral te ataca pero con tus poderes la vaporizas de alguna manera incomprensible. De verdad, que chaval más raro. Has ganado."
+        echo "El jugador 2 intenta atacar al jugador 1 con una simple piedra, el jugador 1 se rie en su cara y con sus poderes evaporiza magicamente a la piedra. El jugador 1 ha ganado."
     elif [ "$variableMachine" = "papel" ]; then
     sleep 1
     source array.sh 
@@ -68,7 +81,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Parece un papelucho sin autoridad pero resulta que es una carta del Alto Mando. Has sido desautorizado y te suicidas porque tu vida ya no tiene sentido. Has perdido."
+        echo "El jugador 2 parece un papelucho sin autoridad pero resulta que es una carta del Alto Mando. El jugador 1 ha sido desautorizado y se suicida porque su vida ya no tiene sentido. El jugador 2 ha ganado."
     elif [ "$variableMachine" = "lagarto" ]; then
     sleep 1
     source array.sh 
@@ -80,7 +93,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "AAAAAAAAAAAA un lagarto. Te mueres envenenado, has perdido."
+        echo "El jugador 1 se cree invencible con sus poderes, pero el jugador 2 transformado en lagarto le muerde en las nalgas y lo envenena. El jugador 2 ha ganado."
     elif [ "$variableMachine" = "spock" ]; then
     sleep 1
     source array.sh 
@@ -92,7 +105,7 @@ esac
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "\"Joder mira que eres feo\" te dice tu gemelo. Os liáis como julandrones y acaba en empate."
+        echo "Pareceis la misma persona, de hecho sois hermanos gemelos, la familia es sagrada asique decidis no mataros, os dais un abrazo y nadie gana. Habeis quedado empate"
     else
         echo
     fi
