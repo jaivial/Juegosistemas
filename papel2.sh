@@ -1,5 +1,5 @@
 #!/bin/bash
-echo " "
+echo ""
 echo "| JUGADOR 2 |"
 echo "-------------"
 echo "1.- Sacar Piedra"
@@ -11,6 +11,7 @@ read -sp "Selecciona una opción: " num
 echo " "
 echo "El jugador 1 ha elegido papel"
 
+##Switch case que da un valor a la variable elegida aleatoriamente por la máquina.
 case "$num" in
 "1")
     sleep 0.5
