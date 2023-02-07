@@ -1,7 +1,7 @@
 #!/bin/bash
+echo ""
 echo "| JUGADOR 2 |"
-echo "| PIEDRA | PAPEL | TIJERAS | LAGARTO | SPOCK |"
-echo "=============================================="
+echo "-------------"
 echo "1.- Sacar Piedra"
 echo "2.- Sacar Papel"
 echo "3.- Sacar Tijeras"
