@@ -45,7 +45,6 @@ case "$num" in
     ;;
 esac
 
-
 if [ "$variableMachine" = "papel" ]; then
     sleep 1
     source array.sh
@@ -57,8 +56,8 @@ if [ "$variableMachine" = "papel" ]; then
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Los papeles unen fuerzas para formar un folio pero ninguno gana. Habéis empatado."
-    elif [ "$variableMachine" = "piedra" ]; then
+    echo "Los papeles unen fuerzas para formar un folio pero ninguno gana. Habéis empatado."
+elif [ "$variableMachine" = "piedra" ]; then
     sleep 1
     source array.sh
     echo "${array[3]}"
@@ -69,8 +68,8 @@ if [ "$variableMachine" = "papel" ]; then
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "En una ardúa batalla consigues enrrollar a la piedra con tu papel. Jugador 1... Sales victorioso por esta vez..."
-    elif [ "$variableMachine" = "tijeras" ]; then
+    echo "En una ardúa batalla consigues enrrollar a la piedra con tu papel. Jugador 1... Sales victorioso por esta vez..."
+elif [ "$variableMachine" = "tijeras" ]; then
     sleep 1
     source array.sh
     echo "${array[3]}"
@@ -81,8 +80,8 @@ if [ "$variableMachine" = "papel" ]; then
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "En un intento de ataque, la tijera te ha partido brutalmente en dos. ¿En serio pensabas ganar a unas tijeras usando un papel? Jugador 1, pierdes la partida XD"
-    elif [ "$variableMachine" = "lagarto" ]; then
+    echo "En un intento de ataque, la tijera te ha partido brutalmente en dos. ¿En serio pensabas ganar a unas tijeras usando un papel? Jugador 1, pierdes la partida XD"
+elif [ "$variableMachine" = "lagarto" ]; then
     sleep 1
     source array.sh
     echo "${array[3]}"
@@ -93,8 +92,8 @@ if [ "$variableMachine" = "papel" ]; then
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Un lagarto enorme acaba de devorarte. Has contribuido a que continue la cadena alimenticia. Jugador 2 gana."
-    elif [ "$variableMachine" = "spock" ]; then
+    echo "Un lagarto enorme acaba de devorarte. Has contribuido a que continue la cadena alimenticia. Jugador 2 gana."
+elif [ "$variableMachine" = "spock" ]; then
     sleep 1
     source array.sh
     echo "${array[3]}"
@@ -105,15 +104,14 @@ if [ "$variableMachine" = "papel" ]; then
     sleep 1
     echo "${array[2]}"
     sleep 1
-        echo "Acabas de desautorizar a Spock y con ello contribuir a la destrucción de La MATRIX. Gana el jugador 1."
-    else
-        echo
-    fi
-
+    echo "Acabas de desautorizar a Spock y con ello contribuir a la destrucción de La MATRIX. Gana el jugador 1."
+else
+    echo
+fi
 
 read -p "¿Quieres jugar otra partida? (Y/N): " respuesta
 case $respuesta in
-    [Yy]*) bash juego2.sh ;;
-    [Nn]*) bash menu.sh ;;
-    *) echo "Error. Introduce Y o N." ;;
+[Yy]*) bash juego2.sh ;;
+[Nn]*) bash menu.sh ;;
+*) echo "Error. Introduce Y o N." ;;
 esac
