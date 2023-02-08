@@ -1,0 +1,1 @@
+# Juegosistemas Hola Vicent esto es para que sepas una pequeña instrucción de como empezar el juego. El primer y único archivo que hay que ejecutar es menu.sh. Para ello primero tienes que pasar todos los archivos a modo ejecutable con el comando 'chmod +x' y luego escribes en la terminal 'sh menu.sh'. Un saludo crack!
